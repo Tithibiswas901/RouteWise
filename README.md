@@ -1,59 +1,32 @@
-# Routewise
+# RouteWise
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.37.
+RouteWise is a smart delivery route planner client-side dashboard designed for dispatchers to manage delivery stops, view them on a map, and optimize the delivery route.
 
-## Development server
+## Features
+- **Add & Manage Stops**: Add stops with details like customer name, address, priority, and time window. Click on the map to easily select coordinates.
+- **Interactive Map**: View all stops and the warehouse on an interactive map. A route is drawn connecting them.
+- **Route Optimization**: Optimize the sequence of deliveries using a heuristic approach.
+- **Drag & Drop Reordering**: Manually adjust the sequence by dragging stops in the list.
+- **Statistics**: See real-time metrics on total distance and estimated delivery time.
+- **Responsive Design**: Designed to work flawlessly on both desktop and mobile devices.
 
-To start a local development server, run:
+## Tech Stack
+- Angular 18+ (Standalone Components, Signals, OnPush change detection)
+- Leaflet for interactive mapping
+- Angular CDK (Drag & Drop)
+- Vanilla CSS with CSS Variables
 
-```bash
-ng serve
-```
+## How to Run
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:4200` in your browser.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Optimization Heuristic Note
+Route optimization uses a Nearest-Neighbor algorithm, grouped by priority. High priority stops are visited first, followed by medium, and finally low priority stops. Within each priority group, the algorithm always proceeds to the nearest unvisited stop based on Haversine distance, starting from the current location.
