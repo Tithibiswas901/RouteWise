@@ -119,13 +119,18 @@ flowchart TD
 
 ---
 
-## 🛣️ Roadmap (Future Scope)
+## 🧭 Platform Overview
 
-While currently tailored for independent operators, RouteWise is laying the groundwork for a robust enterprise solution:
-- **Team Workspaces:** Dedicated environments for companies to manage multiple drivers.
-- **Dispatcher Dashboard:** Assign routes to specific drivers remotely.
-- **Backend Integration:** PostgreSQL databases for persistent assignments, auth (JWT), and historical analytics.
-- **Real-Time Tracking:** Live location updates for drivers en-route.
+**RouteWise** combines interactive route planning with a scalable architecture for modern delivery and field operations.
+
+**Individual Workflow**  
+Plan daily deliveries, prioritize stops, optimize routes, and make on-the-go adjustments through an interactive map interface.
+
+**Team Workflow**  
+Support structured workflows around companies, drivers, assignments, and employee-specific delivery operations.
+
+**Scalable Service Architecture**  
+Built with modular frontend services and extensible data models, enabling integration with authentication, persistent storage, company-level access controls, analytics, and real-time operational updates.
 
 ---
 *Built with ❤️ for modern logistics and field operations.*
